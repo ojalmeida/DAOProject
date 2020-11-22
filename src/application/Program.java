@@ -1,17 +1,24 @@
 package application;
 
 import model.dao.DaoFactory;
+import model.dao.DepartmentDao;
 import model.dao.SellerDao;
 import model.entities.Department;
-import model.entities.Seller;
+
+import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
 
-        SellerDao sellerDao = DaoFactory.createSellerDao();
+        DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 
-        Seller seller = sellerDao.findById(3);
+        Department department = departmentDao.findById(2);
+        System.out.println(department);
 
-        System.out.println(seller);
+
+
+
+
+
     }
 }

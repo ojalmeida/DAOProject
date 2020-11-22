@@ -12,6 +12,9 @@ public class Department implements Serializable {
 
     }
 
+    public Department(Integer id) {
+        this.id = id;
+    }
     public Department(Integer id, String name) {
         this.id = id;
         this.name = name;
@@ -48,9 +51,16 @@ public class Department implements Serializable {
 
     @Override
     public String toString() {
-        return "Department{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+        if(name == null) {
+            return "Department{" +
+                    "id=" + id +
+                    '}';
+        }
+        else{
+            return "Department{" +
+                    "id=" + id +
+                    ", name=" + name +'}';
+        }
     }
+
 }
